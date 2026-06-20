@@ -1,0 +1,44 @@
+[
+  {
+    "name": "MCO Hospital Aids Pvt. Ltd.",
+    "country": "Bangalore, India",
+    "description": "All ranges of surgical sutures, mesh and hernia kits (Relyon Suture).",
+    "logo": "/images/mco-hospital-aids-logo.png"
+  },
+  {
+    "name": "Welfare Medical Ltd.",
+    "country": "United Kingdom",
+    "description": "Ligating clips, horizon clips, appliers, skin staplers and the full range of endo-staplers.",
+    "logo": "/images/welfare-medical-logo.jpg"
+  },
+  {
+    "name": "Changzhou Haiers Medical Devices Co. Ltd.",
+    "country": "China",
+    "description": "Skin staplers, endo-staplers and advanced devices for surgery.",
+    "logo": "/images/haiers-logo.jpg"
+  },
+  {
+    "name": "Erenler Medikal San. Tic. Ltd.",
+    "country": "Turkey",
+    "description": "USG paper rolls and ECG paper.",
+    "logo": null
+  },
+  {
+    "name": "Katsan Medical Devices",
+    "country": "Turkey",
+    "description": "Surgical sutures and 3D mesh.",
+    "logo": "/images/katsan-medical-devices-logo.jpg"
+  },
+  {
+    "name": "Sterineeds Surgicals",
+    "country": "Kochi, India",
+    "description": "Sterile surgical gloves and related range.",
+    "logo": "/images/sterineeds-surgicals-logo.png"
+  },
+  {
+    "name": "Balaji Meditech Ltd.",
+    "country": "Salem, India",
+    "description": "Sterile surgical gowns, drapes and related range.",
+    "logo": "/images/balaji-meditech-logo.jpg"
+  }
+]
