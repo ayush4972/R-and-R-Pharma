@@ -7,7 +7,7 @@ const statusStyles = {
 
 export default function ProductCard({ name, description, status, image }) {
   return (
-    <div className="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden product-card-shadow flex flex-col">
+    <div className="card-lift h-full bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden flex flex-col">
       <div className="aspect-[4/3] bg-surface-dim flex items-center justify-center relative overflow-hidden group">
         <img
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"

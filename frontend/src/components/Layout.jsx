@@ -16,7 +16,9 @@ export default function Layout() {
       <Header />
       {/* pt-16 clears the fixed 64px header */}
       <main className="pt-16">
-        <Outlet />
+        <div key={pathname} className="page-fade">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </>

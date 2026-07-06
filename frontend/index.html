@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>R.G. Suppliers Pvt. Ltd. | Medical Technology Distribution</title>
+    <title>R & R Pharma Pvt. Ltd. | Medical Technology Distribution</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
@@ -111,6 +111,9 @@
       };
     </script>
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
         display: inline-block;
@@ -120,8 +123,15 @@
         font-family: "Inter", sans-serif;
         background-color: #f8f9ff;
       }
+      ::selection {
+        background: #006948;
+        color: #ffffff;
+      }
       .clinical-shadow {
         box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .shadow-soft {
+        box-shadow: 0 10px 34px rgba(11, 28, 48, 0.08);
       }
       .hero-gradient {
         background: linear-gradient(135deg, #f8f9ff 0%, #eff4ff 100%);
@@ -149,6 +159,126 @@
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #6d7a72;
+      }
+
+      /* --- Enhancement layer --- */
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes floatY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-12px);
+        }
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      .page-fade {
+        animation: fadeUp 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+      .glass {
+        background: rgba(248, 249, 255, 0.85);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+      }
+      .card-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      }
+      .card-lift:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 44px rgba(11, 28, 48, 0.1);
+        border-color: #68dba9;
+      }
+      .hero-blob {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(90px);
+        opacity: 0.4;
+        pointer-events: none;
+      }
+      .float-slow {
+        animation: floatY 7s ease-in-out infinite;
+      }
+      .dot-grid {
+        background-image: radial-gradient(rgba(0, 105, 72, 0.16) 1px, transparent 1px);
+        background-size: 22px 22px;
+      }
+      .nav-link {
+        position: relative;
+        padding-bottom: 4px;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 0;
+        background: #006948;
+        border-radius: 2px;
+        transition: width 0.25s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+        width: 100%;
+      }
+      .marquee {
+        overflow: hidden;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        animation: marquee 30s linear infinite;
+      }
+      .marquee:hover .marquee-track {
+        animation-play-state: paused;
+      }
+      .btn-lift {
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+      }
+      .btn-lift:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0, 105, 72, 0.22);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal,
+        .page-fade {
+          opacity: 1 !important;
+          transform: none !important;
+          animation: none !important;
+        }
+        .marquee-track,
+        .float-slow {
+          animation: none !important;
+        }
       }
     </style>
   </head>

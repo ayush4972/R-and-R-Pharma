@@ -1,4 +1,4 @@
-# R.G. Suppliers Pvt. Ltd. (Rising Group Pvt. Ltd.)
+# R & R Pharma Pvt. Ltd.
 
 Full-stack website for a pharmaceutical / medical-equipment distribution company based in
 Sitapaila, Kathmandu, Nepal. The frontend is a React (Vite) single-page app built from the
@@ -13,10 +13,9 @@ project-root/
 │       ├── components/  Header, Footer, Layout, ProductCard, PartnerCard
 │       ├── pages/       Home, About, Products, Partners, Contact
 │       └── data/        products.json, partners.json
-├── backend/           Express + Resend API
-│   ├── routes/contact.js
-│   └── server.js
-└── stitch_assets/     Original Stitch export (design reference only)
+└── backend/           Express + Resend API
+    ├── routes/contact.js
+    └── server.js
 ```
 
 ## Tech stack
@@ -54,7 +53,7 @@ end-to-end with no extra configuration.
 
 ## Configuring email (`.env`)
 
-The contact form sends an email to **gyanshankerdeo@gmail.com** using
+The contact form sends an email to the configured recipient (`EMAIL_TO`) using
 [Resend](https://resend.com). Copy `backend/.env.example` to `backend/.env` and fill in:
 
 | Variable         | Description                                                                                   |
@@ -77,7 +76,7 @@ The contact form sends an email to **gyanshankerdeo@gmail.com** using
 
 **(Optional, for production) Verify your own domain:** In the Resend dashboard go to
 **Domains → Add Domain**, add the DNS records they provide, and once it's verified set
-`EMAIL_FROM` to an address on that domain (e.g. `R.G. Suppliers <noreply@yourdomain.com>`).
+`EMAIL_FROM` to an address on that domain (e.g. `R & R Pharma <noreply@yourdomain.com>`).
 Emails will then send from your own address instead of the default test sender.
 
 `.env` is git-ignored — never commit your API key.

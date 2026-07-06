@@ -1,22 +1,36 @@
-export default function PartnerCard({ name, country, description, logo }) {
+export default function PartnerCard({ name, country, description, logo, website }) {
+  const Wrapper = website ? "a" : "div";
+  const linkProps = website
+    ? { href: website, target: "_blank", rel: "noreferrer", title: `Visit ${name}` }
+    : {};
+
   return (
-    <div className="group bg-surface-container-lowest border border-outline-variant p-gutter rounded-lg hover:shadow-[0px_4px_12px_rgba(0,0,0,0.05)] transition-all duration-300 flex flex-col items-center text-center">
-      <div className="w-24 h-24 bg-surface-container mb-stack-md rounded flex items-center justify-center overflow-hidden">
+    <Wrapper
+      {...linkProps}
+      className="card-lift group relative h-full bg-surface-container-lowest border border-outline-variant p-gutter rounded-xl flex flex-col items-center text-center cursor-pointer"
+    >
+      {website && (
+        <span className="material-symbols-outlined absolute top-4 right-4 text-[18px] text-outline opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-300">
+          open_in_new
+        </span>
+      )}
+      <div className="w-28 h-28 bg-white border border-outline-variant/60 mb-stack-md rounded-xl flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
         {logo ? (
-          <img src={logo} alt={`${name} logo`} className="w-full h-full object-contain p-2" />
+          <img src={logo} alt={`${name} logo`} className="w-full h-full object-contain p-3" />
         ) : (
-          // Erenler Medikal has no logo file — keep the placeholder box blank.
           <span className="sr-only">{name}</span>
         )}
       </div>
       <div>
-        <h3 className="font-label-md text-label-md text-on-surface mb-1">{name}</h3>
-        <p className="font-body-sm text-body-sm text-on-surface-variant flex items-center justify-center gap-1">
+        <h3 className="font-headline-md text-[17px] leading-6 font-semibold text-on-surface mb-1 group-hover:text-primary transition-colors duration-300">
+          {name}
+        </h3>
+        <p className="font-body-sm text-body-sm text-primary font-semibold flex items-center justify-center gap-1">
           <span className="material-symbols-outlined text-[14px]">location_on</span>
           {country}
         </p>
-        <p className="font-body-sm text-body-sm text-on-surface-variant mt-2">{description}</p>
+        <p className="font-body-sm text-body-sm text-on-surface-variant mt-3">{description}</p>
       </div>
-    </div>
+    </Wrapper>
   );
 }

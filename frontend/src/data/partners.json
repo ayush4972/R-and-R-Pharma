@@ -2,43 +2,36 @@
   {
     "name": "MCO Hospital Aids Pvt. Ltd.",
     "country": "Bangalore, India",
-    "description": "All ranges of surgical sutures, mesh and hernia kits (Relyon Suture).",
-    "logo": "/images/mco-hospital-aids-logo.png"
+    "description": "India's first and largest catgut manufacturer, supplying all ranges of surgical sutures, mesh and hernia kits under the Relyon brand.",
+    "logo": "/images/mco-hospital-aids-logo.png",
+    "website": "https://www.relyonsutures.com/"
   },
   {
     "name": "Welfare Medical Ltd.",
     "country": "United Kingdom",
-    "description": "Ligating clips, horizon clips, appliers, skin staplers and the full range of endo-staplers.",
-    "logo": "/images/welfare-medical-logo.jpg"
-  },
-  {
-    "name": "Changzhou Haiers Medical Devices Co. Ltd.",
-    "country": "China",
-    "description": "Skin staplers, endo-staplers and advanced devices for surgery.",
-    "logo": "/images/haiers-logo.jpg"
-  },
-  {
-    "name": "Erenler Medikal San. Tic. Ltd.",
-    "country": "Turkey",
-    "description": "USG paper rolls and ECG paper.",
-    "logo": null
-  },
-  {
-    "name": "Katsan Medical Devices",
-    "country": "Turkey",
-    "description": "Surgical sutures and 3D mesh.",
-    "logo": "/images/katsan-medical-devices-logo.jpg"
+    "description": "UK-based manufacturer of innovative, high-quality medical devices — ligating clips, appliers, skin staplers and a full range of endo-staplers.",
+    "logo": "/images/welfare-medical-logo.jpg",
+    "website": "https://www.welfaremedical.com/"
   },
   {
     "name": "Sterineeds Surgicals",
     "country": "Kochi, India",
-    "description": "Sterile surgical gloves and related range.",
-    "logo": "/images/sterineeds-surgicals-logo.png"
+    "description": "Manufacturer of sterile latex surgical gloves and related surgical consumables, produced to EN ISO 13485 standards.",
+    "logo": "/images/sterineeds-surgicals-logo.png",
+    "website": "https://www.sterineedssurgicals.co.in/"
+  },
+  {
+    "name": "Changzhou Haiers Medical Devices Co. Ltd.",
+    "country": "Changzhou, China",
+    "description": "Chinese manufacturer of skin staplers, endo-staplers and advanced devices for minimally invasive surgery.",
+    "logo": "/images/haiers-logo.jpg",
+    "website": "https://www.hasmedicalstapler.com/"
   },
   {
     "name": "Balaji Meditech Ltd.",
     "country": "Salem, India",
-    "description": "Sterile surgical gowns, drapes and related range.",
-    "logo": "/images/balaji-meditech-logo.jpg"
+    "description": "Leading manufacturer of surgical drapes, gowns, camera covers, HIV kits and custom procedure packs.",
+    "logo": "/images/balaji-meditech-logo.jpg",
+    "website": "https://www.balajimeditech.net/"
   }
 ]

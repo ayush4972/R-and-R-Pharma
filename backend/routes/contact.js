@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
   const recipient = process.env.EMAIL_TO || "gyanshankerdeo@gmail.com";
   // Resend requires the "from" domain to be verified. Until you verify your
   // own domain, use their shared testing sender (onboarding@resend.dev).
-  const fromAddress = process.env.EMAIL_FROM || "R.G. Suppliers Website <onboarding@resend.dev>";
+  const fromAddress = process.env.EMAIL_FROM || "R & R Pharma Website <onboarding@resend.dev>";
 
   // Build the labelled HTML body, showing phone/subject only when provided.
   const rows = [
@@ -60,7 +60,7 @@ router.post("/", async (req, res) => {
 
   const html = `
     <div style="font-family:Arial,sans-serif;color:#0b1c30">
-      <h2>New Inquiry from the R.G. Suppliers website</h2>
+      <h2>New Inquiry from the R &amp; R Pharma website</h2>
       <table style="border-collapse:collapse">${rows.join("")}</table>
       <p style="margin-top:16px"><strong>Message:</strong></p>
       <p style="white-space:pre-wrap">${escapeHtml(message)}</p>

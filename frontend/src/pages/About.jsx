@@ -1,3 +1,5 @@
+import Reveal from "../components/Reveal.jsx";
+
 export default function About() {
   return (
     <>
@@ -11,13 +13,13 @@ export default function About() {
             <div className="col-span-1 border-r border-outline-variant h-full"></div>
           </div>
         </div>
-        <div className="max-w-container-max mx-auto px-margin-desktop relative">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative">
           <nav className="flex mb-stack-md text-label-md text-on-surface-variant space-x-2">
             <span>Company</span>
             <span>/</span>
             <span className="text-primary font-bold">About Us</span>
           </nav>
-          <h1 className="font-display-lg text-display-lg text-on-background tracking-tight">
+          <h1 className="font-display-lg text-headline-lg md:text-display-lg font-bold text-on-background tracking-tight">
             About Us
           </h1>
           <p className="mt-stack-sm font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
@@ -29,7 +31,7 @@ export default function About() {
 
       {/* Story Section */}
       <section className="py-stack-lg bg-surface">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
             <div className="md:col-span-6 space-y-stack-md">
               <div className="inline-block bg-primary-container/10 text-primary-container px-3 py-1 rounded-full font-label-md">
@@ -40,7 +42,7 @@ export default function About() {
               </h2>
               <div className="space-y-4 font-body-md text-body-md text-on-surface-variant leading-relaxed">
                 <p>
-                  Founded in 2014, R.G. Suppliers Pvt. Ltd. was built on a foundation of
+                  Founded in 2014, R &amp; R Pharma Pvt. Ltd. was built on a foundation of
                   professional integrity and deep domain expertise. While our official incorporation
                   dates back a decade, our core leadership brings over{" "}
                   <span className="font-bold text-on-surface">18+ years of industry experience</span>{" "}
@@ -61,15 +63,13 @@ export default function About() {
               </div>
             </div>
             <div className="md:col-span-6">
-              <div
-                className="relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container-low aspect-video clinical-shadow"
-                style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFWFC-1ZXAZ1Z80LCpAd7dMNlpxWArTg-mHLlBuKtiOY9BazY9Tgzt98lGY_pj5A8p4j4J05geYCi62khnyZcfaK_bdbpPQ75ksfs0IUOpxCja2id7AUJmxAXuoTQ48UhGy-BbjtY6_14WP_ttywXn78zx9yiqYLHc64Z4iMOYiGlsRqDL-V6IoWyix0KB-xbs--gIb8AGa6SK5Y0MYRqZ2mjYotG2jNdDNVsDaaWL7hHx7XCmjz0Zn3vK4_Pb9FySeD-8U7GBnDo')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div>
+              <div className="relative rounded-lg overflow-hidden border border-outline-variant bg-surface-container-low shadow-soft">
+                <img
+                  src="/images/about-us-image.jpeg"
+                  alt="R & R Pharma Pvt. Ltd. store in Kathmandu, stocked with medical supplies"
+                  className="w-full h-auto block"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function About() {
             }}
           ></div>
         </div>
-        <div className="max-w-container-max mx-auto px-margin-desktop text-center relative">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative">
           <div className="flex justify-center mb-6">
             <span className="material-symbols-outlined text-on-primary-container text-5xl">
               handshake
@@ -104,13 +104,18 @@ export default function About() {
 
       {/* Our Values Section */}
       <section className="py-24 bg-surface-container-lowest">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
-          <div className="text-center mb-16">
-            <h2 className="font-headline-lg text-headline-lg text-on-background">Our Core Values</h2>
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <Reveal className="text-center mb-16">
+            <span className="font-label-md text-label-md uppercase tracking-widest text-primary">
+              What Drives Us
+            </span>
+            <h2 className="font-headline-lg text-headline-lg text-on-background mt-2">
+              Our Core Values
+            </h2>
             <p className="font-body-md text-on-surface-variant mt-2">
               The pillars that sustain our clinical and logistical operations.
             </p>
-          </div>
+          </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             {[
               {
@@ -131,7 +136,7 @@ export default function About() {
             ].map((value) => (
               <div
                 key={value.title}
-                className="p-8 border border-outline-variant rounded-lg bg-surface transition-all duration-300 hover:clinical-shadow"
+                className="card-lift h-full p-8 border border-outline-variant rounded-xl bg-surface"
               >
                 <div className="w-12 h-12 rounded-full bg-primary-container/10 flex items-center justify-center mb-6">
                   <span
@@ -153,19 +158,22 @@ export default function About() {
 
       {/* Leadership & Team */}
       <section className="pb-24 bg-surface-container-lowest">
-        <div className="max-w-container-max mx-auto px-margin-desktop">
-          <div className="text-center mb-16">
-            <h2 className="font-headline-lg text-headline-lg text-on-background">
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+          <Reveal className="text-center mb-16">
+            <span className="font-label-md text-label-md uppercase tracking-widest text-primary">
+              The People
+            </span>
+            <h2 className="font-headline-lg text-headline-lg text-on-background mt-2">
               Our Leadership &amp; Team
             </h2>
             <p className="font-body-md text-on-surface-variant mt-2">
-              The people driving R.G. Suppliers' commitment to clinical and logistical excellence.
+              The people driving R &amp; R Pharma's commitment to clinical and logistical excellence.
             </p>
-          </div>
+          </Reveal>
 
           {/* Leadership cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-stack-lg">
-            <div className="p-8 border border-outline-variant rounded-lg bg-surface flex gap-stack-md items-start transition-all duration-300 hover:clinical-shadow">
+            <div className="card-lift p-8 border border-outline-variant rounded-xl bg-surface flex gap-stack-md items-start">
               <div className="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-headline-md text-headline-md flex-shrink-0">
                 GS
               </div>
@@ -185,7 +193,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="p-8 border border-outline-variant rounded-lg bg-surface flex gap-stack-md items-start transition-all duration-300 hover:clinical-shadow">
+            <div className="card-lift p-8 border border-outline-variant rounded-xl bg-surface flex gap-stack-md items-start">
               <div className="w-16 h-16 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md flex-shrink-0">
                 RB
               </div>
@@ -194,7 +202,7 @@ export default function About() {
                   Mrs. Rachana Bartaula
                 </h3>
                 <p className="font-label-md text-label-md text-primary uppercase tracking-wider mb-stack-sm">
-                  Finance Manager
+                  Finance Manager &amp; Director
                 </p>
                 <p className="font-body-sm text-body-sm text-on-surface-variant">
                   Oversees the group's financial operations — ensuring transparent pricing,
