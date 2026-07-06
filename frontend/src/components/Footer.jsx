@@ -104,7 +104,7 @@ export default function Footer() {
       <div className="border-t border-tertiary-container/40 py-6 px-margin-mobile md:px-margin-desktop">
         <div className="max-w-container-max mx-auto flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="font-body-sm text-body-sm text-tertiary-fixed-dim">
-            © 2024 R &amp; R Pharma Pvt. Ltd. All rights reserved.
+            © 2026 R &amp; R Pharma Pvt. Ltd. All rights reserved.
           </p>
           <p className="font-label-md text-label-md uppercase tracking-widest text-primary-fixed-dim">
             Raise &amp; Rise
