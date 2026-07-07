@@ -27,25 +27,6 @@ export default function Products() {
           </Reveal>
         ))}
       </div>
-
-      {/* Inventory Status Legend */}
-      <div className="mt-stack-lg p-stack-md bg-surface-container-low rounded-lg border border-outline-variant flex flex-wrap gap-stack-lg items-center justify-center">
-        <span className="font-label-md text-on-surface-variant">INVENTORY STATUS:</span>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-primary-container"></div>
-          <span className="font-body-sm text-on-surface-variant">Available</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-secondary-container"></div>
-          <span className="font-body-sm text-on-surface-variant">
-            Low Stock / Lead Time Required
-          </span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-3 h-3 rounded-full bg-error-container border border-error"></div>
-          <span className="font-body-sm text-on-surface-variant">Currently Out of Stock</span>
-        </div>
-      </div>
     </div>
   );
 }
