@@ -110,21 +110,14 @@ export default function Home() {
         </p>
         <div className="marquee">
           <div className="marquee-track gap-20 pr-20">
-            {[...partners, ...partners].map((p, i) => (
-              <a
-                href={p.website}
-                target="_blank"
-                rel="noreferrer"
-                key={`${p.name}-${i}`}
-                className="shrink-0"
-                title={p.name}
-              >
+            {[...Array(6)].flatMap(() => partners).map((p, i) => (
+              <div key={`${p.name}-${i}`} className="shrink-0" title={p.name}>
                 <img
                   src={p.logo}
                   alt={p.name}
                   className="h-10 md:h-12 w-auto object-contain opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 />
-              </a>
+              </div>
             ))}
           </div>
         </div>

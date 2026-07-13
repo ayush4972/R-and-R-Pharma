@@ -1,19 +1,6 @@
-export default function PartnerCard({ name, country, description, logo, website }) {
-  const Wrapper = website ? "a" : "div";
-  const linkProps = website
-    ? { href: website, target: "_blank", rel: "noreferrer", title: `Visit ${name}` }
-    : {};
-
+export default function PartnerCard({ name, country, description, logo }) {
   return (
-    <Wrapper
-      {...linkProps}
-      className="card-lift group relative h-full bg-surface-container-lowest border border-outline-variant p-gutter rounded-xl flex flex-col items-center text-center cursor-pointer"
-    >
-      {website && (
-        <span className="material-symbols-outlined absolute top-4 right-4 text-[18px] text-outline opacity-0 group-hover:opacity-100 group-hover:text-primary transition-all duration-300">
-          open_in_new
-        </span>
-      )}
+    <div className="card-lift group relative h-full bg-surface-container-lowest border border-outline-variant p-gutter rounded-xl flex flex-col items-center text-center">
       <div className="w-28 h-28 bg-white border border-outline-variant/60 mb-stack-md rounded-xl flex items-center justify-center overflow-hidden transition-transform duration-300 group-hover:scale-105">
         {logo ? (
           <img src={logo} alt={`${name} logo`} className="w-full h-full object-contain p-3" />
@@ -31,6 +18,6 @@ export default function PartnerCard({ name, country, description, logo, website 
         </p>
         <p className="font-body-sm text-body-sm text-on-surface-variant mt-3">{description}</p>
       </div>
-    </Wrapper>
+    </div>
   );
 }
